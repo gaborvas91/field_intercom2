@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Field Intercom</string>
+    <string name="login_title">Field Intercom</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Log in</string>
+    <string name="login_error">Incorrect password</string>
+    <string name="server_address_hint">Server address (e.g. 192.168.1.10)</string>
+    <string name="device_name_hint">Your name or device label (shown to admin)</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_out_of_range">Out of range</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="talk_button_idle">HOLD OR TAP TO TALK</string>
+    <string name="talk_button_active">TALKING — TAP TO STOP</string>
+    <string name="talk_button_muted">MUTED BY ADMIN</string>
+    <string name="incoming_message_title">Message</string>
+    <string name="volume_label">Volume</string>
+    <string name="sidetone_label">Sidetone</string>
+    <string name="logout_button">Log out</string>
+    <string name="latency_test_button">Test latency</string>
+    <string name="latency_test_title">Latency Test</string>
+    <string name="network_ping_label">Network ping (round trip to server)</string>
+    <string name="network_ping_description">Raw WiFi + server overhead, isolated from audio hardware.</string>
+    <string name="ping_placeholder">Last: -- ms   Avg: -- ms</string>
+    <string name="full_loop_label">Full pipeline (mic → network → speaker)</string>
+    <string name="full_loop_description">Hold the button below and talk normally. You should hear yourself come back after a short delay -- that delay is measured below.</string>
+    <string name="loop_placeholder">Last: -- ms   Avg: -- ms   (samples: 0)</string>
+    <string name="hold_to_test_button">HOLD AND TALK TO TEST</string>
+    <string name="done_button">Done</string>
+    <string name="notification_channel_name">Intercom active</string>
+    <string name="notification_text">Field Intercom is running</string>
+</resources>

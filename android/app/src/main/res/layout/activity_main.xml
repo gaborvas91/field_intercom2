@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/statusBanner"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:textColor="@color/text_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/status_connecting_bg"
+        android:text="@string/status_connecting" />
+
+    <Button
+        android:id="@+id/talkButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="24dp"
+        android:text="@string/talk_button_idle"
+        android:textSize="22sp"
+        android:textColor="@color/text_light"
+        android:backgroundTint="@color/talk_button_idle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_label"
+            android:textColor="@color/text_light"
+            android:layout_marginEnd="16dp" />
+
+        <SeekBar
+            android:id="@+id/volumeSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="80" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sidetone_label"
+            android:textColor="@color/text_light"
+            android:layout_marginEnd="16dp" />
+
+        <SeekBar
+            android:id="@+id/sidetoneSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="20" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:text="@string/logout_button"
+        android:textColor="@color/text_light"
+        android:backgroundTint="#333333" />
+
+    <Button
+        android:id="@+id/latencyTestButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/latency_test_button"
+        android:textSize="13sp"
+        android:textColor="#AAAAAA"
+        android:backgroundTint="#222222" />
+
+</LinearLayout>

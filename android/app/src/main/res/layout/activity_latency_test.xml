@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latency_test_title"
+        android:textColor="@color/text_light"
+        android:textSize="24sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Network-only ping -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/network_ping_label"
+        android:textColor="@color/text_light"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/network_ping_description"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/pingResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ping_placeholder"
+        android:textColor="@color/text_light"
+        android:textSize="20sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Full pipeline loopback test -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_loop_label"
+        android:textColor="@color/text_light"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_loop_description"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/loopResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loop_placeholder"
+        android:textColor="@color/text_light"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/testTalkButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/hold_to_test_button"
+        android:textSize="18sp"
+        android:textColor="@color/text_light"
+        android:backgroundTint="@color/talk_button_idle" />
+
+    <Button
+        android:id="@+id/closeTestButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/done_button"
+        android:textColor="@color/text_light"
+        android:backgroundTint="#333333" />
+
+</LinearLayout>

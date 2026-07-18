@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_title"
+        android:textColor="@color/text_light"
+        android:textSize="28sp"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/serverAddressInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/server_address_hint"
+        android:textColor="@color/text_light"
+        android:textColorHint="#888888"
+        android:inputType="textNoSuggestions"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/deviceNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/device_name_hint"
+        android:textColor="@color/text_light"
+        android:textColorHint="#888888"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_hint"
+        android:textColor="@color/text_light"
+        android:textColorHint="#888888"
+        android:inputType="textPassword"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/status_out_of_range_bg"
+        android:visibility="invisible"
+        android:text="@string/login_error"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/login_button"
+        android:textSize="18sp" />
+
+</LinearLayout>

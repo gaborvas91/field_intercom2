@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="status_connected_bg">#1B7A3E</color>
+    <color name="status_out_of_range_bg">#C62828</color>
+    <color name="status_connecting_bg">#8A8A8A</color>
+    <color name="talk_button_idle">#2C3E50</color>
+    <color name="talk_button_active">#D35400</color>
+    <color name="background">#121212</color>
+    <color name="text_light">#FFFFFF</color>
+</resources>
