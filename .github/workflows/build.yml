@@ -1,0 +1,42 @@
+name: Build APK
+
+# Builds the debug APK entirely on GitHub's servers. You never need Android
+# Studio, the Android SDK, or Gradle installed anywhere yourself -- push (or
+# upload) the project, then download the finished .apk from the "Actions" tab.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}   # adds a manual "Run workflow" button in the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Generate a Gradle wrapper pinned to a version compatible with our Android Gradle Plugin
+        working-directory: android
+        run: gradle wrapper --gradle-version 8.4
+
+      - name: Build debug APK
+        working-directory: android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: field-intercom-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
